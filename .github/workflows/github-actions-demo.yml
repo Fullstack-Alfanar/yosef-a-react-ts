@@ -22,3 +22,5 @@ jobs:
           node: ${{matrix.node}}
       - run: npm install    
       - run: npm run build
+
+      
