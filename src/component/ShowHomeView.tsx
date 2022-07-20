@@ -46,6 +46,7 @@ function ShowHomeView(params: any) {
           <button
             onClick={() => {
               let inp: any = document.getElementById("1");
+              setLoading(true);
               setSearch(inp.value);
             }}
           >
