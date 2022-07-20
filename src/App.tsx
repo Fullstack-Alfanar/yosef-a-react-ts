@@ -1,12 +1,10 @@
 import "./App.css";
-import { EmailPage } from "./component/EmailPage";
+import ShowHomeView from "./component/ShowHomeView";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <EmailPage />
-      </header>
+        <ShowHomeView />
     </div>
   );
 }
