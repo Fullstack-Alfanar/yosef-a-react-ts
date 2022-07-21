@@ -42,6 +42,9 @@ function ShowHomeView(params: any) {
         <h2 style={{ margin: "0" }}>Anime List</h2>
         <h6 style={{ color: "#282c34", margin: "0" }}>no hentai allowed</h6>
         <div style={{ display: "flex" }}>
+          <h6 style={{ margin: "0", padding: "0" }}>
+            search additional anime shows:
+          </h6>
           <input style={{ marginRight: "15px" }} id="1" type="text" />
           <button
             onClick={() => {
