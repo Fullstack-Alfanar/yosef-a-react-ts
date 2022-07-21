@@ -5,7 +5,7 @@ import loadingImg from "../assets/loading/loader.gif";
 function ShowHomeView(params: any) {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [search, setSearch] = useState("");
+  const [search, setSearch] = useState("naruto");
 
   useEffect(() => {
     const sendRequest = () => {
