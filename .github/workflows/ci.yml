@@ -1,25 +1,35 @@
-name: build test 2
+name: build test
+
 on: 
+
   push:
-    branches: [main,develop,product]
+    branches: [main,develop,product,master]
+
   pull_request:
-    branches: [main,develop,product]
+    branches: [main,develop,product,master]
 
 jobs:
   build:
+
     runs-on: ubuntu-latest
+
     strategy:
       matrix:
-        node: [14,16,18]
+        node-version: [14,16,18]
 
+    name: node ${{matrix.node-version}} version
     steps:
-      - name: build node ubuntu
+      - name: checking repo
         uses: actions/checkout@v3
 
-      - name: Use Node.js &{{matrix.node}}
+      - name: Use Node.js &{{matrix.node-version}}
         uses: actions/setup-node@v3
         with:
-          node: ${{matrix.node}}
+          node-version: ${{matrix.node-version}}
+
+      - name: install packages
       - run: npm install    
+      
+      - name: run build
       - run: npm run build
 
