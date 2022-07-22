@@ -28,8 +28,8 @@ jobs:
           node-version: ${{matrix.node-version}}
 
       - name: install packages
-      - run: npm install    
+        run: npm install    
       
       - name: run build
-      - run: npm run build
+        run: npm run build
 
